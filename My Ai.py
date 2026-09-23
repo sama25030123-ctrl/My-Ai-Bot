@@ -1,4 +1,5 @@
 import requests
+import os
 import time
 from telebot import apihelper
 apihelper.CONNECT_TIMEOUT = 60
@@ -11,7 +12,7 @@ from PIL import Image
 TOKEN = "8588105195:AAF3_W-lOvR8B5YfZ-inAg9nsMMkGqHUEZM"
 bot = telebot.TeleBot(TOKEN)
 
-gemini_client = genai.Client(api_key="AQ.Ab8RN6I1_RuQXB-ut_uNkOULR5KQZUowj_28L20bljMdSM7zsg")
+gemini_client = genai.Client(api_key=os.environ.get("GEMINI_API_KEY"))
 
 # قاموس لحفظ جلسات المحادثة (Chat History) لكل مستخدم لوحده بناءً على الـ ID بتاعه
 user_chats = {}
