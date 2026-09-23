@@ -1,0 +1,1 @@
+python "C:\Users\aldawlia\OneDrive - Rashid University\Desktop\My Ai\My Ai.py"
