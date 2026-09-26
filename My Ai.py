@@ -34,15 +34,11 @@ def get_user_chat(user_id):
 
 @bot.message_handler(commands=['start'])
 def send_welcome(message):
-    # لما المستخدم يبدأ، بنصفر جلسته عشان تبدأ نضيفة
-    user_chats.pop(message.chat.id, None)
-    bot.reply_to(message, "أهلاً بيكي يا سماء! (أو ضيوفك الكرام). أنا جاهز لأي نصوص تلخصيها، أو صور تسألي عليها، وهفضل فاكر كل كلامنا سوا.")
-
-@bot.message_handler(func=lambda message: True)
-def handle_text(message):
     user_id = message.chat.id
     user_text = message.text
-    
+    # لما المستخدم يبدأ، بنصفر جلسته عشان تبدأ نضِيفة #
+    user_chats.pop(message.chat.id, None)
+    bot.reply_to(message, "أهلاً بكِ يا سماء، ومفضل فاكر كل كلامنا سوا، اسألي عليها، وهفضل فاكر كل كلامنا سوا")
     bot.reply_to(message, "جاري التفكير والرد، ثواني...")
     
     chat = get_user_chat(user_id)
