@@ -12,8 +12,7 @@ from PIL import Image
 TOKEN = "8588105195:AAF3_W-lOvR8B5YfZ-inAg9nsMMkGqHUEZM"
 bot = telebot.TeleBot(TOKEN)
 
-gemini_client = genai.Client(api_key=os.environ.get("GEMINI_API_KEY"))
-
+gemini_client = genai.Client(api_key="حطي_مفتاح_الـ_gemini_هنا")
 # قاموس لحفظ جلسات المحادثة (Chat History) لكل مستخدم لوحده بناءً على الـ ID بتاعه
 user_chats = {}
 
