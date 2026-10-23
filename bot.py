@@ -8,6 +8,7 @@ Telegram Mini App (الصفحة في المتصفح)  <--WebSocket-->  هذا ا
 """
 import os
 import asyncio
+import uvicorn
  
 from fastapi import FastAPI, WebSocket, WebSocketDisconnect
 from fastapi.responses import HTMLResponse
@@ -101,3 +102,6 @@ async def ws_endpoint(ws: WebSocket):
             await ws.close()
         except Exception:
             pass
+        if __name__ == "__main__":
+    # تشغيل سيرفر الـ FastAPI
+            uvicorn.run(app, host="127.0.0.1", port=8000)
