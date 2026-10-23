@@ -1,1 +1,1 @@
-python "C:\Users\aldawlia\OneDrive - Rashid University\Desktop\My Ai\My Ai.py"
+PS C:\Users\aldawlia\OneDrive - Rashid University\Desktop\AI.py> 

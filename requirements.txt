@@ -2,3 +2,5 @@ pyTelegramBotAPI
 google-genai
 pillow
 requests
+fastapi
+uvicorn
